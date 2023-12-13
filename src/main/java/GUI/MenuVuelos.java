@@ -94,6 +94,7 @@ public class MenuVuelos extends javax.swing.JFrame {
         txtDatosAeroDestino = new javax.swing.JTextField();
         txtDatosAeroOrigen = new javax.swing.JTextField();
         lblErrorEliminar = new javax.swing.JLabel();
+        BtnAyuda = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         JMenuPrincipal = new javax.swing.JMenu();
         jPanelVuelosPrevistos = new javax.swing.JMenu();
@@ -196,6 +197,13 @@ public class MenuVuelos extends javax.swing.JFrame {
 
         lblErrorEliminar.setForeground(new java.awt.Color(255, 0, 51));
         lblErrorEliminar.setText("No se puede eliminar");
+
+        BtnAyuda.setText("Ayuda");
+        BtnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAyudaActionPerformed(evt);
+            }
+        });
 
         JMenuPrincipal.setText("Menu principal");
         JMenuPrincipal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -308,11 +316,17 @@ public class MenuVuelos extends javax.swing.JFrame {
                             .addComponent(jSeparator3)
                             .addComponent(jSeparator1))
                         .addGap(16, 16, 16))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnAyuda)
+                .addGap(83, 83, 83))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(10, 10, 10)
+                .addComponent(BtnAyuda)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblBorrar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblErrorEliminar)
@@ -673,6 +687,12 @@ public class MenuVuelos extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jPanelVuelosPrevistosMouseClicked
 
+    private void BtnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAyudaActionPerformed
+        AyudaVuelos ayuda = new AyudaVuelos();
+        ayuda.setVisible(true);
+
+    }//GEN-LAST:event_BtnAyudaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -709,6 +729,7 @@ public class MenuVuelos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnAyuda;
     private javax.swing.JComboBox<String> CBDatos;
     private javax.swing.JComboBox<String> CBEliminar;
     private javax.swing.JComboBox<String> CBModificar;

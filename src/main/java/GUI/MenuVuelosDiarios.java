@@ -94,6 +94,7 @@ public class MenuVuelosDiarios extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtTempOrigen = new javax.swing.JTextField();
         txtTempDestino = new javax.swing.JTextField();
+        BtnAyuda = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         JMenuPrincipal = new javax.swing.JMenu();
         jPanelSalida = new javax.swing.JMenu();
@@ -188,6 +189,13 @@ public class MenuVuelosDiarios extends javax.swing.JFrame {
         jLabel2.setText("Aeropuerto de origen:");
 
         jLabel3.setText("Aeropuerto de destino:");
+
+        BtnAyuda.setText("Ayuda");
+        BtnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAyudaActionPerformed(evt);
+            }
+        });
 
         JMenuPrincipal.setText("Menu principal");
         JMenuPrincipal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -323,11 +331,17 @@ public class MenuVuelosDiarios extends javax.swing.JFrame {
                             .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 928, Short.MAX_VALUE)
                             .addComponent(jSeparator1))
                         .addGap(16, 16, 16))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnAyuda)
+                .addGap(95, 95, 95))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(16, 16, 16)
+                .addComponent(BtnAyuda)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblBorrar)
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -620,12 +634,17 @@ public class MenuVuelosDiarios extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jPanelVuelosCompañiaMouseClicked
 
+    private void BtnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAyudaActionPerformed
+        AyudaVuelos ayuda = new AyudaVuelos();
+        ayuda.setVisible(true);
+        
+    }//GEN-LAST:event_BtnAyudaActionPerformed
+
     private void temperatura(){
-        String apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZmNhbGxlamEyMDE4QGdtYWlsLmNvbSIsImp0aSI6IjM2ODY1N2Q0LTY0MzYtNDUxMC04ZDNhLTM1MjQwNDRlYj"
-                + "JjNSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzAyMDUwODcwLCJ1c2VySWQiOiIzNjg2NTdkNC02NDM2LTQ1MTAtOGQzYS0zNTI0MDQ0ZWIyYzUiLCJyb2xlIjoiIn0.5GTebsglyBGax6iWlg_cbyrBN0Lc0BOlx9lOodwjiAs"; 
+        String apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZmNhbGxlamEyMDE4QGdtYWlsLmNvbSIsImp0aSI6IjM2ODY1N2Q0LTY0MzYtNDUxMC04ZDNhLTM1MjQwNDRlYjJjNSIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzAyMDUwODcwLCJ1c2VySWQiOiIzNjg2NTdkNC02NDM2LTQ1MTAtOGQzYS0zNTI0MDQ0ZWIyYzUiLCJyb2xlIjoiIn0.5GTebsglyBGax6iWlg_cbyrBN0Lc0BOlx9lOodwjiAs"; 
         String airportCode = CBDatos.getSelectedItem().toString(); 
 
-        String apiUrl = "https://opendata.aemet.es/opendata/api/valores/climatologicos/diarios/datos/fechaini/fechafin/estacion/" + airportCode + "/?api_key=" + apiKey;
+        String apiUrl = "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/" + airportCode + "/?api_key=" + apiKey;
 
         try {
             URL url = new URL(apiUrl);
@@ -683,6 +702,7 @@ public class MenuVuelosDiarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnAyuda;
     private javax.swing.JComboBox<String> CBDatos;
     private javax.swing.JComboBox<String> CBEliminar;
     private javax.swing.JComboBox<String> CBModificar;

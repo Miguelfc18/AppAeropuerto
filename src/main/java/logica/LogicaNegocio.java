@@ -27,7 +27,7 @@ import pa.cifpaviles.dam.aeropuertoclase.dto.VueloDiario;
 
 /**
  *
- * @author mariorl
+ * @author miguelfc
  */
 public class LogicaNegocio {
 
