@@ -94,10 +94,11 @@ public class MenuVuelos extends javax.swing.JFrame {
         txtDatosAeroDestino = new javax.swing.JTextField();
         txtDatosAeroOrigen = new javax.swing.JTextField();
         lblErrorEliminar = new javax.swing.JLabel();
-        BtnAyuda = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         JMenuPrincipal = new javax.swing.JMenu();
         jPanelVuelosPrevistos = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -198,13 +199,6 @@ public class MenuVuelos extends javax.swing.JFrame {
         lblErrorEliminar.setForeground(new java.awt.Color(255, 0, 51));
         lblErrorEliminar.setText("No se puede eliminar");
 
-        BtnAyuda.setText("Ayuda");
-        BtnAyuda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnAyudaActionPerformed(evt);
-            }
-        });
-
         JMenuPrincipal.setText("Menu principal");
         JMenuPrincipal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -220,6 +214,19 @@ public class MenuVuelos extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(jPanelVuelosPrevistos);
+
+        jMenu1.setText("Ayuda");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
+        jMenuItem1.setText("Ayuda");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 
@@ -316,17 +323,11 @@ public class MenuVuelos extends javax.swing.JFrame {
                             .addComponent(jSeparator3)
                             .addComponent(jSeparator1))
                         .addGap(16, 16, 16))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BtnAyuda)
-                .addGap(83, 83, 83))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(BtnAyuda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(45, 45, 45)
                 .addComponent(lblBorrar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblErrorEliminar)
@@ -687,11 +688,10 @@ public class MenuVuelos extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jPanelVuelosPrevistosMouseClicked
 
-    private void BtnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAyudaActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         AyudaVuelos ayuda = new AyudaVuelos();
         ayuda.setVisible(true);
-
-    }//GEN-LAST:event_BtnAyudaActionPerformed
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -729,7 +729,6 @@ public class MenuVuelos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnAyuda;
     private javax.swing.JComboBox<String> CBDatos;
     private javax.swing.JComboBox<String> CBEliminar;
     private javax.swing.JComboBox<String> CBModificar;
@@ -739,7 +738,9 @@ public class MenuVuelos extends javax.swing.JFrame {
     private javax.swing.JButton bntModificar;
     private javax.swing.JButton btnDatos;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu jPanelVuelosPrevistos;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;

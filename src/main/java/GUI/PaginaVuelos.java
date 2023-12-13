@@ -50,12 +50,14 @@ public class PaginaVuelos extends javax.swing.JFrame {
         txtHoraL = new javax.swing.JTextField();
         lblDias = new javax.swing.JLabel();
         txtDias = new javax.swing.JTextField();
-        btnVolver = new javax.swing.JButton();
         btnAdd = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         CBOrigen = new javax.swing.JComboBox<>();
         CBDestino = new javax.swing.JComboBox<>();
-        BtnAyuda = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,13 +74,6 @@ public class PaginaVuelos extends javax.swing.JFrame {
         lblHoraL.setText("Hora de Llegada:");
 
         lblDias.setText("DIas que Opera:");
-
-        btnVolver.setText("Menu Principal");
-        btnVolver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVolverActionPerformed(evt);
-            }
-        });
 
         btnAdd.setLabel("Añadir");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -100,12 +95,28 @@ public class PaginaVuelos extends javax.swing.JFrame {
             }
         });
 
-        BtnAyuda.setText("Ayuda");
-        BtnAyuda.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.setText("Ayuda");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
+        jMenuItem1.setText("Ayuda");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnAyudaActionPerformed(evt);
+                jMenuItem1ActionPerformed(evt);
             }
         });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Menu Principal");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -138,12 +149,7 @@ public class PaginaVuelos extends javax.swing.JFrame {
                             .addComponent(txtDias)
                             .addComponent(CBOrigen, 0, 325, Short.MAX_VALUE)
                             .addComponent(CBDestino, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnAyuda)
-                        .addGap(87, 87, 87))))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(btnVolver)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAdd)
@@ -152,13 +158,11 @@ public class PaginaVuelos extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(btnVolver)
-                .addGap(24, 24, 24)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCodigoV)
-                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnAyuda))
-                .addGap(65, 65, 65)
+                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAeropuertoO)
                     .addComponent(CBOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -186,17 +190,11 @@ public class PaginaVuelos extends javax.swing.JFrame {
                     .addComponent(txtDias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAdd)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-        MenuInicio menu=new MenuInicio();
-        menu.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnVolverActionPerformed
 
     private void CBOrigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBOrigenActionPerformed
         nombreCompanyaOrigen = (String) CBOrigen.getSelectedItem();
@@ -226,10 +224,16 @@ public class PaginaVuelos extends javax.swing.JFrame {
        nombreCompanyaDestino = (String) CBDestino.getSelectedItem();
     }//GEN-LAST:event_CBDestinoActionPerformed
 
-    private void BtnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAyudaActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         AyudaVuelosInsercion ayuda = new AyudaVuelosInsercion();
         ayuda.setVisible(true);
-    }//GEN-LAST:event_BtnAyudaActionPerformed
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        MenuInicio menu=new MenuInicio();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -267,11 +271,13 @@ public class PaginaVuelos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnAyuda;
     private javax.swing.JComboBox<String> CBDestino;
     private javax.swing.JComboBox<String> CBOrigen;
     private javax.swing.JButton btnAdd;
-    private javax.swing.JButton btnVolver;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblAeropuertoD;
     private javax.swing.JLabel lblAeropuertoO;
