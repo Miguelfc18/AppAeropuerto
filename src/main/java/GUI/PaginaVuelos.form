@@ -31,7 +31,10 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblHoraL" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="lblHoraL" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="698" max="32767" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lblCodigoV" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -51,9 +54,11 @@
                           <Component id="CBOrigen" pref="325" max="32767" attributes="0"/>
                           <Component id="CBDestino" alignment="0" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="BtnAyuda" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="315" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <Component id="btnVolver" min="-2" max="-2" attributes="0"/>
@@ -74,8 +79,9 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblCodigoV" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BtnAyuda" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblAeropuertoO" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="CBOrigen" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -204,6 +210,14 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnAyuda">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ayuda"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnAyudaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

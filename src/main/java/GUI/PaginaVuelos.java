@@ -55,6 +55,7 @@ public class PaginaVuelos extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         CBOrigen = new javax.swing.JComboBox<>();
         CBDestino = new javax.swing.JComboBox<>();
+        BtnAyuda = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -99,6 +100,13 @@ public class PaginaVuelos extends javax.swing.JFrame {
             }
         });
 
+        BtnAyuda.setText("Ayuda");
+        BtnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAyudaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -110,7 +118,9 @@ public class PaginaVuelos extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHoraL)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblHoraL)
+                        .addContainerGap(698, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblCodigoV)
@@ -127,8 +137,10 @@ public class PaginaVuelos extends javax.swing.JFrame {
                             .addComponent(txtHoraS)
                             .addComponent(txtDias)
                             .addComponent(CBOrigen, 0, 325, Short.MAX_VALUE)
-                            .addComponent(CBDestino, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(315, Short.MAX_VALUE))
+                            .addComponent(CBDestino, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtnAyuda)
+                        .addGap(87, 87, 87))))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnVolver)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -144,8 +156,9 @@ public class PaginaVuelos extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCodigoV)
-                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(66, 66, 66)
+                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnAyuda))
+                .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAeropuertoO)
                     .addComponent(CBOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -213,6 +226,11 @@ public class PaginaVuelos extends javax.swing.JFrame {
        nombreCompanyaDestino = (String) CBDestino.getSelectedItem();
     }//GEN-LAST:event_CBDestinoActionPerformed
 
+    private void BtnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAyudaActionPerformed
+        AyudaVuelosInsercion ayuda = new AyudaVuelosInsercion();
+        ayuda.setVisible(true);
+    }//GEN-LAST:event_BtnAyudaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -249,6 +267,7 @@ public class PaginaVuelos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnAyuda;
     private javax.swing.JComboBox<String> CBDestino;
     private javax.swing.JComboBox<String> CBOrigen;
     private javax.swing.JButton btnAdd;
