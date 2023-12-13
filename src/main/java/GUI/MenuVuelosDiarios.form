@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JMenuItem" name="jMenuItem1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jMenuItem1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JMenuItem" name="jMenuItem2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jMenuItem2"/>
+      </Properties>
+    </Component>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="JMenuPrincipal">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Menu principal"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JMenuPrincipalMouseClicked"/>
+          </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jPanelSalida">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Salidas"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelSalidaMouseClicked"/>
+          </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jPanelLlegadas">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Llegadas"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelLlegadasMouseClicked"/>
+          </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jPanelRecaudaciones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Recaudaciones"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelRecaudacionesMouseClicked"/>
+          </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jPanelVuelosCompa&#xf1;ia">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Vuelos por Compa&#xf1;ia"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelVuelosCompa&#xf1;iaMouseClicked"/>
+          </Events>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lblDatos" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="lblPrefijoDatos" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="CBDatos" min="-2" pref="283" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblTelfPasa2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblMunicipio2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblDireccion2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNombre2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblModiCodigo2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblTelfAero2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                      <Component id="txtModificarCod" min="-2" pref="282" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtModiHoraSalida" min="-2" pref="282" max="-2" attributes="0"/>
+                                  <Component id="txtModificarFecha" min="-2" pref="282" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txtPrecio" alignment="0" pref="283" max="32767" attributes="0"/>
+                                          <Component id="txtNumPlazasOcu" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtModiHoraLlegada" alignment="0" min="-2" pref="282" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="bntModificar" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Component id="lblBorrar" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lblModificar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lblPrefijoBaja2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="CBModificar" min="-2" pref="283" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lblPrefijoBaja4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="CBEliminar" min="-2" pref="283" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="btnEliminar" min="-2" pref="120" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblTelfPasa4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblMunicipio4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblDireccion4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNombre4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblModiCodigo4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblTelfAero4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtDatosPrecio" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtDatosPlazas" alignment="0" min="-2" pref="283" max="-2" attributes="0"/>
+                                      <Component id="txtDatosLlegada" alignment="0" min="-2" pref="282" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                              <Component id="txtDatosCod" min="-2" pref="282" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="txtDatosFecha" alignment="0" min="-2" pref="282" max="-2" attributes="0"/>
+                                          <Component id="txtDatosSalida" alignment="0" min="-2" pref="282" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Component id="btnDatos" min="-2" pref="120" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtTempOrigen" max="32767" attributes="0"/>
+                                                      <Component id="txtTempDestino" pref="97" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jSeparator3" alignment="0" pref="928" max="32767" attributes="0"/>
+                          <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <Component id="lblBorrar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblPrefijoBaja4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CBEliminar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnEliminar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblModificar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPrefijoBaja2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CBModificar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtModificarCod" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblModiCodigo2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblNombre2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtModificarFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblDireccion2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtModiHoraSalida" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtModiHoraLlegada" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lblMunicipio2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtNumPlazasOcu" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTelfPasa2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTelfAero2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bntModificar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblDatos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPrefijoDatos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CBDatos" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtDatosCod" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblModiCodigo4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblNombre4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtDatosFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTempOrigen" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblDireccion4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtDatosSalida" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTempDestino" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtDatosLlegada" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lblMunicipio4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtDatosPlazas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTelfPasa4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtDatosPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTelfAero4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="btnDatos" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="lblBorrar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="DAR DE BAJA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPrefijoDatos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Elegir el codigo del vuelo diario para ver sus datos:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPrefijoBaja4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Elegir el codigo del vuelo diario a eliminar:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="CBEliminar">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CBEliminarActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtPrecio">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblTelfPasa2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&#xfa;mero de plazas ocupadas:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtModificarCod">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblTelfAero2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Precio del vuelo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="bntModificar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Modificar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bntModificarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblModiCodigo2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Codigo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator3">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnEliminar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eliminar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="CBModificar">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CBModificarActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtModiHoraLlegada">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDireccion2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hora de salida real: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblModificar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MODIFICAR"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNumPlazasOcu">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDatos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="VER DATOS"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblMunicipio2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hora de llegada real:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPrefijoBaja2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Elegir el codigo del vuelo diario a modificar:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnDatos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ver Datos"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDatosActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="CBDatos">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CBDatosActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblNombre2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fecha del vuelo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtModiHoraSalida">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtModificarFecha">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblTelfPasa4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&#xfa;mero de plazas ocupadas:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDatosCod">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblTelfAero4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Precio del vuelo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblModiCodigo4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Codigo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDatosPlazas">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblMunicipio4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hora de llegada real:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblNombre4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fecha del vuelo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDatosSalida">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDatosFecha">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDatosPrecio">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDatosLlegada">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDireccion4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hora de salida real: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Temperatura:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aeropuerto de origen:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aeropuerto de destino:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTempOrigen">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTempDestino">
+    </Component>
+  </SubComponents>
+</Form>
